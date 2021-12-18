@@ -23,10 +23,7 @@ class Patch:
         if self.ks == None:
             self.ks = Ks(KS_ARCH_ARM64, KS_MODE_LITTLE_ENDIAN)
         
-        try:
-            instruction = bytearray(self.ks.asm(instruction)[0])
-        except KsError:
-            return
+        instruction = bytearray(self.ks.asm(instruction)[0])
         return (address, instruction)
 
     def generateIPS32Patch(self):
