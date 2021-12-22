@@ -4,10 +4,12 @@ from GameOffsets.BD.BDGameOffsets100 import BDGameOffsets100
 from GameOffsets.BD.BDGameOffsets110 import BDGameOffsets110
 from GameOffsets.BD.BDGameOffsets111 import BDGameOffsets111
 from GameOffsets.BD.BDGameOffsets112 import BDGameOffsets112
+from GameOffsets.BD.BDGameOffsets113 import BDGameOffsets113
 from GameOffsets.SP.SPGameOffsets100 import SPGameOffsets100
 from GameOffsets.SP.SPGameOffsets110 import SPGameOffsets110
 from GameOffsets.SP.SPGameOffsets111 import SPGameOffsets111
 from GameOffsets.SP.SPGameOffsets112 import SPGameOffsets112
+from GameOffsets.SP.SPGameOffsets113 import SPGameOffsets113
 
 
 class GameOffsets:
@@ -22,7 +24,9 @@ class GameOffsets:
                     case GameRevision.REV_111:
                         offsets = BDGameOffsets111()
                     case GameRevision.REV_112:
-                        offsets = BDGameOffsets112()   
+                        offsets = BDGameOffsets112()
+                    case GameRevision.REV_113:
+                        offsets = BDGameOffsets113()
             case GameType.SP:
                 match gameRevision:
                     case GameRevision.REV_100:
@@ -33,6 +37,8 @@ class GameOffsets:
                         offsets = SPGameOffsets111()
                     case GameRevision.REV_112:
                         offsets = SPGameOffsets112()
+                    case GameRevision.REV_113:
+                        offsets = SPGameOffsets113()
         
         self.buildID = offsets.buildID
 
