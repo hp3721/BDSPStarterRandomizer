@@ -11,6 +11,7 @@ class SPGameOffsets112:
         
         # Rival Pokémon Offsets
         get_RivalPokeNoAddress = 0x238E810
+        
         self.rivalGrassOffset = get_RivalPokeNoAddress + 0xC8
         self.rivalFireOffset = self.rivalGrassOffset + 0x8C
         self.rivalWaterOffset = self.rivalFireOffset + 0x4
