@@ -4,7 +4,7 @@ from GameOffsets.GameOffsets import GameOffsets
 from Patch import Patch
 import random
 
-gameOffsets = GameOffsets(GameType.BD, GameRevision.REV_120)
+gameOffsets = GameOffsets(GameType.BD, GameRevision.REV_130)
 patch = Patch(shift=0x100)
 
 patch.addPatch(gameOffsets.starterGrassOffset, f'mov w0, #{hex(random.randint(1, 493))}')
